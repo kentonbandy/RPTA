@@ -8,10 +8,9 @@ namespace RPTA.Models
         public int ItemId { get; set; }
         public string Name { get; set; } = string.Empty;
         public int Cost { get; set; }
-        public int Type { get; set; }
+        public ItemType Type { get; set; } = new();
         public int Action { get; set; }
         public int Weight { get; set; }
-        public int TextId { get; set; }
         public GameText Text { get; set; } = new();
         public bool Equippable { get; set; }
     }

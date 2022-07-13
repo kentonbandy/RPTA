@@ -8,12 +8,26 @@ namespace RPTA.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // keeping this here just in case
+            modelBuilder.Entity<SlotItem>().HasKey(s => new { s.SlotId, s.ItemId });
         }
 
         public DbSet<Item> Item { get; set; }
+        public DbSet<ItemType> ItemType { get; set; }
+        public DbSet<Inventory> Inventory { get; set; }
         public DbSet<Character> Character { get; set; }
         public DbSet<Pronouns> Pronouns { get; set; }
         public DbSet<GameText> GameText { get; set; }
+        public DbSet<Condition> Condition { get; set; }
+        public DbSet<Location> Location { get; set; }
+        public DbSet<LocationText> LocationText { get; set; }
+        public DbSet<Container> Container { get; set; }
+        public DbSet<Slot> Slot { get; set; }
+        public DbSet<SlotItem> SlotItem { get; set; }
+        public DbSet<Game> Game { get; set; }
+        public DbSet<Term> Term { get; set; }
+        public DbSet<Font> Font { get; set; }
+        public DbSet<Exit> Exit { get; set; }
+        public DbSet<Player> Player { get; set; }
+        public DbSet<Save> Save { get; set; }
     }
 }
