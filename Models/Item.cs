@@ -2,6 +2,9 @@
 
 namespace RPTA.Models
 {
+    /// <summary>
+    /// Simple static items. These objects should NOT be changed by game logic, only referenced.
+    /// </summary>
     public class Item
     {
         [Key]
@@ -12,6 +15,6 @@ namespace RPTA.Models
         public int Action { get; set; }
         public int Weight { get; set; }
         public GameText Text { get; set; } = new();
-        public bool Equippable { get; set; }
+        public List<Location> Locations { get; set; }
     }
 }

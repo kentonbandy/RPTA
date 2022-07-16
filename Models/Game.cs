@@ -10,6 +10,7 @@ namespace RPTA.Models
         public int GameId { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
+        public Player Player { get; set; } = new();
         public Term Currency { get; set; } = new();
         public Term Weight { get; set; } = new();
         public Font Font { get; set; } = new();

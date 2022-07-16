@@ -16,6 +16,7 @@ namespace RPTA.Models
         public Term Currency { get; set; } = new();
         public Term Weight { get; set; } = new();
         public Font Font { get; set; } = new();
+        public Player Player { get; set; } = new();
         public List<Location> Locations { get; set; } = new();
         public int CurrentLocationId { get; set; }
         [Computed]
